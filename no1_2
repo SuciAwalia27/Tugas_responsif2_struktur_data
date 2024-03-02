@@ -1,0 +1,96 @@
+package strukturdata2;
+
+public class StrukturData2 {
+   
+    public static void main(String[] args) {
+    // 1. Menampilkan semua isi array dengan 8 tipe data primitif
+        System.out.println("1. Menampilkan semua isi array dengan 8 tipe data primitif");
+        // Array dengan 8 tipe data primitif
+        int[] intArray = {1, 2, 3, 4, 5};
+        byte[] byteArray = {10, 20, 30, 40, 50};
+        short[] shortArray = {100, 200, 300, 400, 500};
+        long[] longArray = {1000L, 2000L, 3000L, 4000L, 5000L};
+        float[] floatArray = {1.1f, 2.2f, 3.3f, 4.4f, 5.5f};
+        double[] doubleArray = {1.111, 2.222, 3.333, 4.444, 5.555};
+        char[] charArray = {'s', 'u', 'c', 'i', 'a'};
+        boolean[] booleanArray = {true, false, true, false, true};
+
+        // Menampilkan nilai setiap array
+        System.out.println("Nilai array intArray:");
+        for (int i : intArray) {
+            System.out.println(i);
+        }
+
+        System.out.println("Nilai array byteArray:");
+        for (byte b : byteArray) {
+            System.out.println(b);
+        }
+
+        System.out.println("Nilai array shortArray:");
+        for (short s : shortArray) {
+            System.out.println(s);
+        }
+
+        System.out.println("Nilai array longArray:");
+        for (long l : longArray) {
+            System.out.println(l);
+        }
+
+        System.out.println("Nilai array floatArray:");
+        for (float f : floatArray) {
+            System.out.println(f);
+        }
+
+        System.out.println("Nilai array doubleArray:");
+        for (double d : doubleArray) {
+            System.out.println(d);
+        }
+
+        System.out.println("Nilai array charArray:");
+        for (char c : charArray) {
+            System.out.println(c);
+        }
+
+        System.out.println("Nilai array booleanArray:");
+        for (boolean bool : booleanArray) {
+            System.out.println( bool);
+        }
+    // 2.  Mendefinisikan array 1 dimensi dengan tipe data primitif
+        System.out.println("2. Mendefinisikan array 1 dimensi dengan tipe data primitif");
+        int[] array = {10, 20, 30, 40, 50};
+
+        // Metode 1: Cetak menggunakan perulangan for
+        System.out.println("Metode 1: Cetak menggunakan perulangan for");
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + " ");
+        }
+        System.out.println();
+
+        // Metode 2: Cetak menggunakan perulangan for-each
+        System.out.println("Metode 2: Cetak menggunakan perulangan for-each");
+        for (int num : array) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
+
+        // Metode 3: Cetak menggunakan metode toString() dari kelas Arrays
+        System.out.println("Metode 3: Cetak menggunakan metode toString()");
+        System.out.println(java.util.Arrays.toString(array));
+
+        // Metode 4: Cetak menggunakan kelas StringJoiner
+        System.out.println("Metode 4: Cetak menggunakan kelas StringJoiner");
+        java.util.StringJoiner joiner = new java.util.StringJoiner(", ", "[", "]");
+        for (int num : array) {
+            joiner.add(Integer.toString(num));
+        }
+        System.out.println(joiner.toString());
+
+        // Metode 5: Cetak menggunakan Stream API
+        System.out.println("Metode 5: Cetak menggunakan Stream API");
+        java.util.stream.IntStream.of(array).forEach(num -> System.out.print(num + " "));
+        System.out.println();
+        
+        
+    }
+}
+    
